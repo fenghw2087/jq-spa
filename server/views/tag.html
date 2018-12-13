@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tag</title>
+    <%- include('common/commonfile.html') %>
+    <link href="<%=filePath%>css/tag<%=hash%>.css" rel="stylesheet">
+</head>
+<body>
+<%- include('common/header.html') %>
+<div class="main-content" id="tagPageOuter">
+    <div class="muti-page-section" id="listPageOuter">
+        <%- include('tag/list.html') %>
+    </div>
+</div>
+<%- include('common/footer.html') %>
+<script src="<%=filePath%>js/tag<%=hash%>.js"></script>
+</body>
+</html>

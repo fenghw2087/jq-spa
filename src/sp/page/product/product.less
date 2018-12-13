@@ -1,0 +1,41 @@
+@import "../../../common/less/base";
+
+.show-more {
+  margin-left: 240px;
+  .close-item {
+    display: block;
+  }
+  .open-item {
+    display: none;
+  }
+  &.open {
+    .close-item {
+      display: none;
+    }
+    .open-item {
+      display: block;
+    }
+  }
+  .fa {
+    margin-left: 2px;
+  }
+}
+.condition-toggle {
+  height: 70px;
+  overflow-y: hidden;
+  transition: height .3s;
+  &.open {
+    height: 222px;
+  }
+  &.not-hidden {
+    overflow-y: visible;
+  }
+}
+.product-table {
+  overflow-x: auto !important;
+  .ys-table {
+    th, td {
+      border: 1px solid #ddd;
+    }
+  }
+}

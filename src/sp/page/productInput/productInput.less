@@ -1,0 +1,168 @@
+@import "../../../common/less/base";
+
+.ys-step-o {
+    display: flex;
+    align-items: center;
+    width: 800px;
+    line-height: 38px;
+    margin: 0 auto 20px;
+    .step-item {
+        display: flex;
+        align-items: center;
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid;
+            text-align: center;
+            border-radius: 50%;
+            color: @mainColor;
+            font-size: 20px;
+            .step-num {
+                display: none;
+            }
+            &> .fa-check {
+                display: block;
+                line-height: 38px;
+            }
+        }
+        &.current {
+            .step-icon {
+                background-color: @mainColor;
+                color: #fff;
+                .step-num {
+                    display: block;
+                }
+                &> .fa-check {
+                    display: none;
+                }
+            }
+            .step-content {
+                font-weight: bold;
+            }
+            &~.step-item {
+                .step-content {
+                    color: #999;
+                }
+                .step-icon {
+                    color: #999;
+                    .step-num {
+                        display: block;
+                    }
+                    &> .fa-check {
+                        display: none;
+                    }
+                }
+            }
+            &~.step-bar {
+                background-color: #999;
+            }
+        }
+        .step-content {
+            color: #333;
+            margin-left: 10px;
+        }
+    }
+    .step-bar {
+        flex: 1;
+        margin: 0 10px;
+        height: 2px;
+        background-color: @mainColor;
+    }
+}
+
+.section-header {
+    background-color:fade(@mainColor,5%);
+}
+.step-section {
+    margin-top: 10px;
+    &.current ~.step-section {
+        display: none;
+    }
+}
+.step-section-c {
+    padding: 10px 20px;
+}
+.basic-img-c {
+    &>img {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin: 0 5px 5px 0;
+    }
+}
+
+.channel-i-c {
+    width: 1000px;
+    margin: 0 auto 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    .channel-header {
+        line-height: 30px;
+        background-color: #f1f2f3;
+        padding: 0 20px;
+        .channel-index {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            line-height: 20px;
+            margin-right: 5px;
+            background-color: @mainColor;
+            color: #fff;
+            text-align: center;
+        }
+    }
+    .channel-d-c {
+        padding-left: 50px;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+    .channel-item {
+        flex: 1;
+        display: flex;
+        margin-right: 10px;
+        .channel-t {
+            width: 4em;
+            color: #999;
+            text-align: right;
+            margin-right: 20px;
+        }
+        .channel-v {
+            color: #666;
+            flex: 1;
+        }
+    }
+    .channel-price-table {
+        width: 1000px;
+    }
+}
+.add-new-price {
+    margin: 20px 0 10px 20px;
+}
+
+.step-section:not(.current) {
+    .channel-price-table td:last-child,
+    .channel-price-table th:last-child{
+        display: none;
+    }
+    .add-new-price {
+        display: none;
+    }
+    .remove-channel,
+    .open-channel-modal,
+    .btn-group2 {
+        display: none;
+    }
+}
+
+.label-tag {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 12px;
+    line-height: 24px;
+    border-radius: 3px;
+    color: @mainColor;
+    border: 1px solid;
+    margin-right: 5px;
+}

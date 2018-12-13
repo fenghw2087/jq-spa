@@ -1,0 +1,46 @@
+@import "../../../common/less/base";
+
+
+.category-outer {
+    max-height: 200px;
+    overflow-y: auto;
+    height: auto !important;
+}
+.category-i-c {
+    position: relative;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    .cate-i-t {
+        line-height: 26px;
+        background-color: #00b79330;
+        padding: 0 20px;
+    }
+    .cate-close {
+        position: absolute;
+        line-height: 26px;
+        width: 30px;
+        text-align: center;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+    .cate-c {
+        padding: 5px 10px 0;
+    }
+    .cate-i {
+        display: inline-block;
+        margin: 0 10px 5px 0;
+        border: 1px solid #ccc;
+        line-height: 24px;
+        padding: 0 20px 0 10px;
+        position: relative;
+        &> .fa-times {
+            cursor: pointer;
+            position: absolute;
+            width: 20px;
+            right: 0;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+}

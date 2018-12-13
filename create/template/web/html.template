@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${NAME}</title>
+    <%- include('common/commonfile.html') %>
+    <link href="<%=filePath%>css/${NAME}<%=hash%>.css" rel="stylesheet">
+</head>
+<body>
+<%- include('common/header.html') %>
+<div class="main-content" id="${NAME}PageOuter">
+    ${NAME}
+</div>
+<%- include('common/footer.html') %>
+<script src="<%=filePath%>js/${NAME}<%=hash%>.js"></script>
+</body>
+</html>

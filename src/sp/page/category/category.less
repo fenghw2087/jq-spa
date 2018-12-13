@@ -1,0 +1,24 @@
+.category-name {
+  & > .fa-caret-down {
+    display: none;
+  }
+  & > .fa-caret-right {
+    display: inline-block;
+  }
+  &.active {
+    & > .fa-caret-down {
+      display: inline-block;
+    }
+    & > .fa-caret-right {
+      display: none;
+    }
+  }
+}
+
+.category-icon {
+  width: 30px;
+  height: 30px;
+}
+.sec-tr {
+  background-color: #eaecef;
+}
